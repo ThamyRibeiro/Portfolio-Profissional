@@ -1,0 +1,50 @@
+# Dependências
+/node_modules/
+/.pnp
+.pnp.*
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/versions
+
+# Next.js, builds e cache
+/.next/
+/out/
+/build/
+/dist/
+/.turbo/
+*.tsbuildinfo
+next-env.d.ts
+/public/sw.js
+
+# Testes e artefatos locais
+/coverage/
+/playwright-report/
+/test-results/
+/artifacts/
+/tmp/
+*.log
+
+# Ambiente e segredos
+.env*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+/.vercel/
+
+# Editor e sistema
+.DS_Store
+Thumbs.db
+Desktop.ini
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json
+.idea/
+*~
+*.swp
+
+# Estado local de ferramentas; manter skills e documentação versionadas
+/.codex/

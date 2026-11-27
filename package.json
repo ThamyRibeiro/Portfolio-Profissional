@@ -1,0 +1,37 @@
+{
+  "name": "my-app",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build --webpack",
+    "start": "next start",
+    "lint": "eslint",
+    "prebuild": "node scripts/build-pwa.mjs",
+    "typecheck": "tsc --noEmit --incremental false",
+    "docs:check": "node scripts/check-harness.mjs",
+    "format:check": "prettier --check app features shared scripts docs README.md",
+    "format": "prettier --write app features shared scripts docs README.md",
+    "check": "npm run lint && npm run typecheck && npm run docs:check && npm run format:check",
+    "pretest:pwa": "node scripts/build-pwa.mjs",
+    "test:pwa": "node --test scripts/pwa.test.mjs"
+  },
+  "dependencies": {
+    "lucide-react": "^1.57.0",
+    "next": "16.4.6",
+    "react": "19.3.0",
+    "react-dom": "19.3.0",
+    "zustand": "^5.0.15"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4.3.3",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "eslint": "^9",
+    "eslint-config-next": "16.4.6",
+    "prettier": "^3.9.10",
+    "tailwindcss": "^4",
+    "typescript": "^5"
+  }
+}
